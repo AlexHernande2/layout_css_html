@@ -25,3 +25,22 @@
 .colorWhite{
     color: #fff;
 }
+.paginaPrincipal .contenido{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 300px);
+}
+.contenido nav{
+    width: 200px;
+    background-color: #9b8f8f;
+    height: calc(100vh - 300px);
+}
+.contenido article{
+    width: calc(100% - 200px);
+    /*vw anchoi */
+    height: calc(100vh - 300px);
+    
+}
