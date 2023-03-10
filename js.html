@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var nombrePersona ='Johan';
+        let nombreMascota = "Pelusa";
+        let apellidoPersona= "Fonseca"
+        let edad = 20 ;
+        let marorEdad= true; 
+        const EDAD_MAXIMA = 18; 
+        let lista = [9,8,7,6,5,4] ; // creación de array 
+        console.log(lista);
+        let lista2= [...lista];
+        lista2.push(3);
+        console.log (lista2);
+        // creacion de un objeto
+       let persona ={
+        nombre:'Johan',
+        apellido: 'Fonseca',
+        edad: 30,
+        mayorEdad:true,
+        jobs:['Cine ', 'Desarrollo de software', ' Video Juegos' ],
+        experienciaLabora:{
+            empresa1: '5 años',
+            empre2 : '1 año',
+        }
+       };
+       console.log (persona.nombre, persona.jobs [1], persona.experienciaLabora.empresa1);
+
+       let personas = [
+        {nombre:'Jhohan', apellido: 'Fonseca', edad:30},
+        {nombre:'Ana', apellido: 'Diaz', edad:25},
+        {nombre:'Jose', apellido: 'Gomez', edad:35},
+        {nombre:'Maria', apellido: 'Lopez', edad:17},
+        {nombre:'Camilo', apellido: 'Lopez', edad:30},
+       ]
+       for (let index =0 ; index < personas.length; index ++){
+            let persona = personas[index];
+            if(persona.edad>=18){
+                console.log (persona.nombre, 'es mayor de edad');
+            }else{
+                console.log(persona.nombre, ' es menor de edad');
+            }
+       }
+       console.log('While-------------------------');
+        let index =0;
+       while(index < personas.length){
+            let persona= personas[index];
+            if(persona.edad>=18){
+                    console.log (persona.nombre, 'es mayor de edad');
+                }else{
+                    console.log(persona.nombre, ' es menor de edad');
+                }
+                index++;
+       }
+       console.log('While-------------------------');
+       index =0;
+       let estado= true
+       while(estado){
+            let persona= personas[index];
+            if(persona.edad>=18){
+                    console.log (persona.nombre, 'es mayor de edad');
+            }else{
+                    console.log(persona.nombre, ' es menor de edad');
+            }
+            index++;
+                if(index == personas.length){
+                    // estado = false;
+                    break;// cerrar el ciclo no usar en for
+                } 
+       }
+       console.log('Do While-------------------------' );
+       index =0;
+       do{
+        let persona= personas[index];
+        if(persona.edad>=18){
+                    console.log (persona.nombre, 'es mayor de edad');
+                }else{
+                    console.log(persona.nombre, ' es menor de edad');
+                }
+                index++;
+       }while(index < personas.length);
+
+
+       console.log('For | in -------------------------' );
+       // posicion de cada elemento 
+       for (let index in personas){
+        let persona= personas[index];
+        if(persona.edad>=18){
+                    console.log (persona.nombre, 'es mayor de edad');
+                }else{
+                    console.log(persona.nombre, ' es menor de edad');
+                }
+       }
+
+
+       console.log('For | of -------------------------' );
+       // trae el valor
+       for (let persona of personas){
+        if(persona.edad>=18){
+                    console.log (persona.nombre, 'es mayor de edad');
+                }else{
+                    console.log(persona.nombre, ' es menor de edad');
+                }
+       }
+       console.log('Foreach -------------------------' );
+       personas.forEach((persona, index) =>{
+            if(persona.edad>=18){
+                     console.log (persona.nombre, 'es mayor de edad');
+                }else{
+                     console.log(persona.nombre, ' es menor de edad');
+                }
+       } );
+       console.log('--------------------');
+       let opcion ='A';
+       switch(opcion){
+        case 'A':
+            /*
+
+            */
+           break;
+           case 'B':
+            //codigo 
+            break;
+            default:
+                //
+                break;
+       }
+       //&& (expe && expr 2)
+       // < menor
+       // === igual] el valor y tipo de variable
+       // >= mayor o igual
+       // <= menor o igual
+       console. log('Expr 1:', ('5'== 5));
+       console. log('Expr 2:', ('5'=== 5));
+       
+       //Declarar Metodo
+       console.log('Funciones----------------');
+
+       function validarEdad(edad){
+        if(persona.edad>=18){
+                    console.log ( 'La persona es mayor de edad');
+                }else{
+                    console.log( 'La persona es menor de edad');
+                }
+
+       }
+       console.log('-------');
+       validarEdad(20);
+       function esMayorEdad(edad){
+        return edad>=18? 'La persona es mayor de edad' :'La persona es menor de edad'; 
+       }
+       console.log(esMayorEdad(17));
+      
+       // funcion anonima 
+       console.log('-------');
+       let validarEdad2 =  function esMayorEdad(edad){
+        if(edad>=18){
+                    console.log ( 'La persona es mayor de edad');
+                }else{
+                    console.log( 'La persona es menor de edad');
+                }
+       }
+       validarEdad(30);
+
+       // funciones anonimas sin la palabra reservada function 
+       console.log('func    ')
+       let esMayorEdad2= (edad)=>{
+            return edad >18? 'Si es mayor de edad' : 'Es menor de edad';
+       }
+       console.log(esMayorEdad2(25));
+       
+
+    </script>
+    
+</body>
+</html>
