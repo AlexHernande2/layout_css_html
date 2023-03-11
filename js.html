@@ -5,6 +5,7 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- script para escribir en java -->
     <script>
         var nombrePersona ='Johan';
         let nombreMascota = "Pelusa";
@@ -156,7 +157,7 @@
        }
        console.log(esMayorEdad(17));
       
-       // funcion anonima 
+       // funcion anonima que viene con una variable
        console.log('-------');
        let validarEdad2 =  function esMayorEdad(edad){
         if(edad>=18){
@@ -167,14 +168,59 @@
        }
        validarEdad(30);
 
-       // funciones anonimas sin la palabra reservada function 
+       // funciones anonimas sin la palabra reservada function  =>
        console.log('func    ')
        let esMayorEdad2= (edad)=>{
+        //? condición por asiganción
             return edad >18? 'Si es mayor de edad' : 'Es menor de edad';
        }
        console.log(esMayorEdad2(25));
        
+       class Persona {
+        nombre ='';
+        apellido='';
+        edadd = 0;
+        email ='';
+        
+        getNombreCompleto(nombre){
+            return this.nombre + ' '+ this.apellido;
+        }
 
+        esMayorEdad(){
+            // if(this.edadd >=18){
+            //     return 'Si';
+
+            // }else {
+            //     return 'No';
+            // }
+             //? condición por asiganción
+            return this.edad >=18? 'Si' : 'No';
+        }
+      
+        }
+        let persona1= new Persona(); // Instancia de un objeto
+        persona1.nombre ='Jhoan';
+        persona1.apellido='Fonseca';
+        persona1.edad=30;
+        
+        console.log('Nombre de la persona: ',persona1.getNombreCompleto());
+        console.log('¿Es mayor de edad?' , persona1.esMayorEdad());
+
+        class Estudiante extends Persona {
+            codigo= '';
+            cantidaddeMaterias =0;
+
+        }
+        class Docente{
+            codigo= '';
+        }
+
+        let estudiante1 = new Estudiante (); 
+        estudiante1.nombre = 'Alex';
+        estudiante1.apellido='Ramirez';
+        estudiante1.codigo = '12234';
+        estudiante1.cantidaddeMaterias= 5 ;
+        console.log('Nombre del estudiante', estudiante1.getNombreCompleto());
     </script>
     
 </body>
